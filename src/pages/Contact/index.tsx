@@ -11,7 +11,7 @@ function Contact() {
     }, [])
     return (
         <div className='container'>
-            <div className='py-[50px] sm:px-[40px] px-[10px]'>
+            <div className='overflow-hidden py-[50px] sm:px-[40px] px-[10px]'>
                 <Title title={'Get in'} titleActive={'touch'} subTitle={'contact'} data-aos='fade-up' data-aos-duration='1000' />
                 <div className='flex flex-col mymd:items-start mymd:flex-row gap-[100px] mt-[100px]'>
                     <div className='mymd:basis-1/3 basis-full flex flex-col gap-[30px]' data-aos='fade-right' data-aos-duration='2500'>
