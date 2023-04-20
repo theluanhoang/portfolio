@@ -1,10 +1,8 @@
 import React from 'react'
 import { FaHome, FaUserAlt, FaShoppingBag } from 'react-icons/fa'
 import { HiMailOpen } from 'react-icons/hi'
-import { BsSunFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
-import { useAppDispatch, useAppSelector } from '../../store/hooks'
-import { selectDarkLight, toggleMode } from '../../store/darkLight.slice'
+import { useAppDispatch } from '../../store/hooks'
 
 
 function Sidebar() {
