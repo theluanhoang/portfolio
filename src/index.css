@@ -157,5 +157,5 @@ body {
 }
 
 .input-form {
-  @apply w-full py-[10px] px-[10px] rounded-lg bg-[#222222] text-white;
+  @apply w-full py-[10px] px-[10px] rounded-lg bg-[#222222] text-white outline-none;
 }

@@ -7,7 +7,7 @@ import { BsFillPhoneFill } from 'react-icons/bs'
 import { IoEarth } from 'react-icons/io5'
 import { TbSourceCode } from 'react-icons/tb'
 import { Project } from '../../store/projects';
-function Popup({ author, category, image, name, responsive, source, technology, website }: Project) {
+function Popup({ author, category, image, name, responsive, source, technology, website }: Project, { type }: { type: string }) {
     const dispatch = useAppDispatch();
 
     const handleToggle = () => {

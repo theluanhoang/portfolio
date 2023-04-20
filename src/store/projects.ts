@@ -10,6 +10,7 @@ import flashshop from '../assets/image/flashshop.png'
 import shopeeui from '../assets/image/shopeeui.png'
 import vku from '../assets/image/vku.png'
 import blog from '../assets/image/blog.png'
+import coffee from '../assets/image/coffee.png'
 import tcCovid from '../assets/image/tc-covid.png'
 
 export interface Project {
@@ -90,14 +91,24 @@ export const projects:Project[] = [
         remarkable: true
     },
     {
+        name: 'Coffee',
+        author: 'Hoang The Luan',
+        responsive: true,
+        technology: 'HTML & Tailwindcss, Javascript',
+        website: 'https://tluandev-blog-coffee.web.app/',
+        source: 'https://github.com/luantrum27/tailwind-coffee',
+        image: coffee,
+        category: 'htmlcss',
+        remarkable: true
+    },
+    {
         name: 'Calculator',
         author: 'Hoang The Luan',
         technology: 'HTML & CSS, Javascript',
         responsive: true,
         website: 'https://luantrum27.github.io/Calculator/',
         source: 'https://github.com/luantrum27/Calculator.git',
-        image: calculator
-        ,
+        image: calculator,
         category: 'htmlcss'
     },
     {
