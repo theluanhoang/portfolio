@@ -13,8 +13,8 @@ function Contact() {
         <div className='container'>
             <div className='py-[50px] sm:px-[40px] px-[10px]'>
                 <Title title={'Get in'} titleActive={'touch'} subTitle={'contact'} data-aos='fade-up' data-aos-duration='1000' />
-                <div className='flex flex-col mymd:flex-row gap-[100px] mt-[100px]'>
-                    <div className='basis-1/3 flex flex-col gap-[30px]' data-aos='fade-right' data-aos-duration='2500'>
+                <div className='flex flex-col mymd:items-start mymd:flex-row gap-[100px] mt-[100px]'>
+                    <div className='mymd:basis-1/3 basis-full flex flex-col gap-[30px]' data-aos='fade-right' data-aos-duration='2500'>
                         <h1 className='text-2xl font-bold uppercase text-white tracking-wider'>don't be shy</h1>
                         <p className='text-white'>
                             Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.
@@ -57,7 +57,7 @@ function Contact() {
                             </li>
                         </ul>
                     </div>
-                    <div className='basis-2/3 flex flex-col gap-[30px]' data-aos='fade-left' data-aos-duration='2500'>
+                    <div className='mymd:basis-2/3 basis-full flex flex-col gap-[30px]' data-aos='fade-left' data-aos-duration='2500'>
                         <div className='flex flex-col md:flex-row gap-[30px]'>
                             <input type="text" placeholder='Your name' className='input-form' />
                             <input type="email" placeholder='Your email' className='input-form' />

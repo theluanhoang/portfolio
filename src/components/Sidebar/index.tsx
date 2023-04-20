@@ -3,17 +3,22 @@ import { FaHome, FaUserAlt, FaShoppingBag } from 'react-icons/fa'
 import { HiMailOpen } from 'react-icons/hi'
 import { BsSunFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
+import { useAppDispatch, useAppSelector } from '../../store/hooks'
+import { selectDarkLight, toggleMode } from '../../store/darkLight.slice'
 
 
 function Sidebar() {
     const [currentPage, setCurrentPage] = React.useState('/');
+    const dispatch = useAppDispatch();
 
     return (
         <>
-            <li className={`fixed top-[30px] right-[30px] sidebar-item ${currentPage === 'light' ? 'sidebar-item--active' : ''} `} onClick={() => setCurrentPage('light')}>
+            {/* <li className={`fixed top-[30px] right-[30px] z-50 sidebar-item ${isDark ? 'bg-[#2B2A2A]' : 'sidebar-item--active'} `} onClick={() => {
+                toggleDarkLight();
+            }}>
                 <BsSunFill size={20} color='#fff' />
-            </li>
-            <div className='fixed mymd:top-[200px] mymd:right-[30px] mymd:translate-x-[0] bottom-[20px] right-[50%] translate-x-[50%]'>
+            </li> */}
+            <div className='fixed z-50 mymd:top-[200px] mymd:right-[30px] mymd:translate-x-[0] bottom-[20px] right-[50%] translate-x-[50%]'>
                 <div className='flex flex-row mymd:flex-col gap-[20px] '>
                     <Link to='/' className={`sidebar-item ${currentPage === '/' ? 'sidebar-item--active' : ''} `} onClick={() => setCurrentPage('/')}>
                         <FaHome size={20} color='#fff' />

@@ -1,6 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: ['class', '[data-mode="dark"]'],
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -22,7 +23,8 @@ export default {
         'xs-[320px]': '320px'
       },
       colors: {
-        'my-yellow': '#FFB400'
+        'my-yellow': '#FFB400',
+        'light': '#666666'
       }
     }
   },

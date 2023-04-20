@@ -1,9 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, persistStore } from "redux-persist";
 import popupSlice from "./popup.slice";
+import darkLightSlice from "./darkLight.slice";
 
 const rootReducer = combineReducers({
-    popup: popupSlice
+    popup: popupSlice,
+    darkLight: darkLightSlice
 })
 
 const store = configureStore({

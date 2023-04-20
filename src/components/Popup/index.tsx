@@ -1,4 +1,3 @@
-import React from 'react'
 import { useAppDispatch } from '../../store/hooks';
 import { togglePopup } from '../../store/popup.slice';
 import { AiOutlineFileText, AiOutlineCloseCircle } from 'react-icons/ai'
@@ -16,8 +15,8 @@ function Popup({ author, category, image, name, responsive, source, technology, 
     }
     return (
         <>
-            <div className='fixed top-0 right-0 left-0 bottom-0 bg-black bg-opacity-50 cursor-pointer' onClick={handleToggle}></div>
-            <div className='bg-[#252525] overflow-scroll rounded-3xl max-w-[680px] max-h-[600px] fixed py-8 px-5 left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%]'>
+            <div className='fixed top-0 right-0 left-0 bottom-0 z-50 bg-black bg-opacity-50 cursor-pointer' onClick={handleToggle}></div>
+            <div className='bg-[#252525] overflow-scroll z-50 rounded-none sm:rounded-3xl  sm:max-w-[680px] w-full sm:max-h-[600px] h-full fixed py-8 px-5 left-[50%] -translate-x-[50%] sm:top-[50%] sm:-translate-y-[50%] top-0 -translate-y-0'>
                 <div className='flex flex-col gap-7'>
                     <h1 className='text-my-yellow text-4xl font-bold text-center uppercase tracking-wider'>{name}</h1>
                     <div className='grid md:grid-cols-2 grid-cols-1 gap-3'>
@@ -50,7 +49,7 @@ function Popup({ author, category, image, name, responsive, source, technology, 
                         <img src={image} alt={name} className='rounded-lg' />
                         <div className='absolute top-0 left-0 rounded-lg bottom-0 right-0 bg-black bg-opacity-50 flex group-hover:hidden'></div>
                     </a>
-                    <AiOutlineCloseCircle size={36} color='white' className='cursor-pointer top-0 right-0 md:top-5 fixed md:right-[20px] hover:scale-100 scale-95 duration-100' onClick={handleToggle} />
+                    <AiOutlineCloseCircle size={36} color='white' className='cursor-pointer top-[10px] right-[20px] sm:top-5 fixed sm:right-[20px] hover:scale-100 scale-95 duration-100' onClick={handleToggle} />
                 </div>
             </div>
         </>

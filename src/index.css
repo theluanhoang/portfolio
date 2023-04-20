@@ -16,6 +16,11 @@ body {
   background-color: #111111;
 }
 
+.text-white-light {
+  color: #666666;
+}
+
+
 @layer components {
   .sidebar-item {
     @apply w-[50px] h-[50px] flex flex-row items-center justify-center rounded-full bg-[#2B2A2A] cursor-pointer duration-200 transition-all;
@@ -123,7 +128,7 @@ body {
   left: -83%;
   top: -50%;
   background-color: #FFB400;
-  z-index: -1;
+  z-index: 0;
 }
 
 .container {
@@ -153,5 +158,4 @@ body {
 
 .input-form {
   @apply w-full py-[10px] px-[10px] rounded-lg bg-[#222222] text-white;
-
 }
