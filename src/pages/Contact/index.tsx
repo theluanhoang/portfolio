@@ -25,21 +25,6 @@ function Contact() {
         message: Yup.string().required('This field is require.')
     })
     const dbRef = ref(database);
-    const [toSend, setToSend] = useState({
-        from_name: '',
-        to_name: '',
-        message: '',
-        reply_to: '',
-    });
-
-    const setDataToSend = (comment: IComment) => {
-        setToSend({
-            from_name: comment.email,
-            to_name: 'hoangtheluan2016@gmail.com',
-            message: comment.message,
-            reply_to: comment.email
-        })
-    }
 
     const handleSubmit = React.useCallback(async (values: any, { resetForm }: { resetForm: () => void }) => {
         try {
@@ -83,7 +68,6 @@ function Contact() {
             }
 
         } catch (error) {
-            console.log(error);
 
             notification.error({
                 message: 'Failed',

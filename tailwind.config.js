@@ -20,7 +20,8 @@ export default {
         'mymd': '991px',
         'mylg': '1142px',
         'sm-[580]': '570px',
-        'xs-[320px]': '320px'
+        'xs-[320px]': '320px',
+        'xs-[333px]': '333px',
       },
       colors: {
         'my-yellow': '#FFB400',

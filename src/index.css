@@ -159,3 +159,12 @@ body {
 .input-form {
   @apply w-full py-[10px] px-[10px] rounded-lg bg-[#222222] text-white outline-none;
 }
+
+.custom-image-class {
+  @apply rounded-lg;
+}
+
+.quill-video {
+  width: 100%;
+  height: 100%;
+}
