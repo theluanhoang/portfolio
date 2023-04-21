@@ -8,9 +8,15 @@ import { ref, child, get, set } from "firebase/database";
 import { database } from '../../firebase'
 import { v4 as uuidv4 } from 'uuid';
 import { notification } from 'antd'
+import { send } from 'emailjs-com';
 import * as Yup from 'yup'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-
+interface IComment {
+    username: string,
+    email: string,
+    subject?: string,
+    message: string
+}
 function Contact() {
     let initialValues = { username: '', email: '', subject: '', message: '' };
     const validationSchema = Yup.object().shape({
@@ -19,15 +25,45 @@ function Contact() {
         message: Yup.string().required('This field is require.')
     })
     const dbRef = ref(database);
+    const [toSend, setToSend] = useState({
+        from_name: '',
+        to_name: '',
+        message: '',
+        reply_to: '',
+    });
+
+    const setDataToSend = (comment: IComment) => {
+        setToSend({
+            from_name: comment.email,
+            to_name: 'hoangtheluan2016@gmail.com',
+            message: comment.message,
+            reply_to: comment.email
+        })
+    }
 
     const handleSubmit = React.useCallback(async (values: any, { resetForm }: { resetForm: () => void }) => {
         try {
             const uniqueId = uuidv4();
-
             await validationSchema.validate(values, { abortEarly: true });
-
             const isValid = await validationSchema.isValid(values);
             if (isValid) {
+                send(
+                    'service_meg75cy',
+                    'template_blb2oqj',
+                    {
+                        from_name: values.email,
+                        to_name: 'hoangtheluan2016@gmail.com',
+                        message: values.message,
+                        reply_to: values.email
+                    },
+                    'KcZHcBZH-IpTQ5d58'
+                )
+                    .then((response) => {
+                        console.log('SUCCESS!', response.status, response.text);
+                    })
+                    .catch((err) => {
+                        console.log('FAILED...', err);
+                    });
                 set(child(dbRef, 'comments/' + uniqueId), values);
                 resetForm()
                 notification.success({
@@ -47,6 +83,8 @@ function Contact() {
             }
 
         } catch (error) {
+            console.log(error);
+
             notification.error({
                 message: 'Failed',
                 description: 'You have failed submit!',
