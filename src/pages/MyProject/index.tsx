@@ -4,6 +4,7 @@ import { selectPopup, togglePopup } from '../../store/popup.slice';
 import Popup from '../../components/Popup';
 import { useEffect, useState } from 'react';
 import { Project, projects } from '../../store/projects';
+import PaginatedItems from '../../components/PaginatedItems';
 
 function MyProject() {
     const dispatch = useAppDispatch();
@@ -14,8 +15,7 @@ function MyProject() {
     }
     const [listProject, setListProject] = useState<Project[]>([]);
     const [currentProject, setCurrentProject] = useState<Project>();
-    const handleToggle = (project: Project) => {
-        setCurrentProject(project);
+    const handleToggle = () => {
         dispatch(togglePopup());
     }
     useEffect(() => {
@@ -47,7 +47,7 @@ function MyProject() {
                     </li>
                 </ul>
                 <div className='flex items-center justify-center'>
-                    <div className='mt-[50px] grid mymd:grid-cols-3 sm-[580]:grid-cols-2 grid-cols-1 justify-center gap-y-[40px] gap-x-[20px]'>
+                    {/* <div className='mt-[50px] grid mymd:grid-cols-3 sm-[580]:grid-cols-2 grid-cols-1 justify-center gap-y-[40px] gap-x-[20px]'>
                         {
                             listProject.map((project, index) => (
                                 <div key={index} className='portifolio-content-item' data-aos='fade-right' data-aos-duration='1000'>
@@ -56,7 +56,9 @@ function MyProject() {
                                 </div>
                             ))
                         }
-                    </div>
+                    </div> */}
+                    <PaginatedItems type='' data={listProject} itemPerPage={6} handleToggle={handleToggle} setCurrentData={setCurrentProject} />
+
                 </div>
             </div>
 

@@ -7,6 +7,9 @@ import { database } from '../../firebase';
 import { notification } from 'antd';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { selectBlogs, setBlogs } from '../../store/blogs.slice';
+import AOS from '../../utils/aos';
+import PaginatedItems from '../../components/PaginatedItems';
+
 export interface IBlog {
     content: string;
     title: string;
@@ -21,7 +24,9 @@ function Blog() {
         title: '',
         thumbnail: ''
     });
-
+    useEffect(() => {
+        AOS.init();
+    }, [])
     const handleToggle = () => {
         setIsShow(!isShow);
     }
@@ -56,26 +61,9 @@ function Blog() {
     return (
         <div className='container'>
             <div className='py-[50px]'>
-                <Title title={'My'} titleActive={'blog'} subTitle={'posts'} />
+                <Title title={'My'} titleActive={'blog'} subTitle={'posts'} data-aos='fade-up' data-aos-duration='1500' />
                 <div className='mt-[100px] flex items-center justify-center'>
-                    <div className='grid mylg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px]'>
-                        {
-                            blogs?.map((blog, index) => (
-                                <div key={index} className='mylg:max-w-[390px] max-w-full rounded-lg overflow-hidden cursor-pointer group' onClick={() => {
-                                    handleToggle();
-                                    setCurrentBlog(blog);
-                                }}>
-                                    <figure className='overflow-hidden border-b-4 border-my-yellow h-[175px]'>
-                                        <img className='group-hover:scale-125 duration-300 transition-all' src={blog.thumbnail} alt="BWD 2022" />
-                                    </figure>
-                                    <div className='py-[30px] h-[184px] px-[30px] bg-[#252525] flex flex-col gap-[20px]'>
-                                        <h1 className='group-hover:text-my-yellow line-clamp-1 text-white font-bold text-2xl duration-200 cursor-pointer'>{blog.title}</h1>
-                                        <p className='text-white line-clamp-3'>Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack b</p>
-                                    </div>
-                                </div>
-                            ))
-                        }
-                    </div>
+                    <PaginatedItems type='blog' data={blogs} itemPerPage={3} handleToggle={handleToggle} setCurrentData={setCurrentBlog} />
                 </div>
             </div>
             {
