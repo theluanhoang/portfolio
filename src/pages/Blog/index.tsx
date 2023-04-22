@@ -14,6 +14,7 @@ export interface IBlog {
     content: string;
     title: string;
     thumbnail: string;
+    description: string;
 }
 function Blog() {
     const dispatch = useAppDispatch();
@@ -22,7 +23,8 @@ function Blog() {
     const [currentBlog, setCurrentBlog] = useState<IBlog>({
         content: '',
         title: '',
-        thumbnail: ''
+        thumbnail: '',
+        description: ''
     });
     useEffect(() => {
         AOS.init();

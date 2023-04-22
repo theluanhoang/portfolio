@@ -47,18 +47,7 @@ function MyProject() {
                     </li>
                 </ul>
                 <div className='flex items-center justify-center'>
-                    {/* <div className='mt-[50px] grid mymd:grid-cols-3 sm-[580]:grid-cols-2 grid-cols-1 justify-center gap-y-[40px] gap-x-[20px]'>
-                        {
-                            listProject.map((project, index) => (
-                                <div key={index} className='portifolio-content-item' data-aos='fade-right' data-aos-duration='1000'>
-                                    <img src={project.image} alt={project.name} />
-                                    <span className='portfolio-coating' onClick={() => handleToggle(project)}><p className='portfolio-coating--text'>{project.name}</p></span>
-                                </div>
-                            ))
-                        }
-                    </div> */}
                     <PaginatedItems type='' data={listProject} itemPerPage={6} handleToggle={handleToggle} setCurrentData={setCurrentProject} />
-
                 </div>
             </div>
 

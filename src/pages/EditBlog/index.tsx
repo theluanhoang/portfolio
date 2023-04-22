@@ -13,12 +13,13 @@ function Admin() {
 
     const [body, setBody] = useState('');
     const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
     const [thumbnail, setThumbnail] = useState('');
     const [preview, setPreview] = useState(false);
     const handleSubmit = () => {
         try {
             const uniqueId = uuidv4();
-            set(child(dbRef, 'blogs/' + uniqueId), { title, content: body, thumbnail });
+            set(child(dbRef, 'blogs/' + uniqueId), { title, content: body, thumbnail, description });
             notification.success({
                 message: 'Success',
                 description: 'You have successfully created blog!',
@@ -47,6 +48,7 @@ function Admin() {
                     <div className={`${preview ? 'mymd:w-[50%]' : 'w-full'} flex flex-col gap-[20px] mymd:order-1 order-2`}>
 
                         <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" className='input-form' placeholder='Title blog' />
+                        <input value={description} onChange={(e) => setDescription(e.target.value)} type="text" className='input-form' placeholder='Description blog' />
                         <Quill setBody={setBody} setThumbnail={setThumbnail} />
                         <div className='flex flex-col items-center sm:flex-row gap-[30px]'>
                             <button onClick={handlePreview} className='flex flex-row items-center gap-2 max-w-[230px] text-center uppercase text-white px-[30px] py-[10px] border rounded-md border-my-yellow hover:bg-my-yellow duration-200'>

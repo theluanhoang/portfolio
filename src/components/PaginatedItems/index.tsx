@@ -1,6 +1,5 @@
 import { JSXElementConstructor, Key, ReactElement, ReactFragment, ReactPortal, useEffect, useState } from 'react'
 import ReactPaginate from 'react-paginate';
-import { IBlog } from '../../pages/Blog';
 import blogDefault from '../../assets/image/blog_default.png'
 interface IProps {
     data: any;
@@ -33,7 +32,7 @@ function PaginatedItems(props: IProps) {
                     type === 'blog' ? (
                         <ul className='grid mylg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px]'>
                             {
-                                currentItems.map((blog: { thumbnail: string | undefined; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; }, index: Key | null | undefined) => (
+                                currentItems.map((blog: { description: string; thumbnail: string | undefined; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; }, index: Key | null | undefined) => (
                                     <div key={index} className='mylg:max-w-[390px] max-w-full rounded-lg overflow-hidden cursor-pointer group' onClick={() => {
                                         handleToggle();
                                         setCurrentData(blog);
@@ -43,7 +42,7 @@ function PaginatedItems(props: IProps) {
                                         </figure>
                                         <div className='py-[30px] h-[184px] px-[30px] bg-[#252525] flex flex-col gap-[20px]'>
                                             <h1 className='group-hover:text-my-yellow line-clamp-1 text-white font-bold text-2xl duration-200 cursor-pointer'>{blog.title}</h1>
-                                            <p className='text-white line-clamp-3'>Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack b</p>
+                                            <p className='text-white line-clamp-3'>{blog.description}</p>
                                         </div>
                                     </div>
                                 ))

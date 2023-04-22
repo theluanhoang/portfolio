@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import AOS from '../../utils/aos'
+import ESidebar from '../../interfaces/ESidebar';
 function Home() {
     useEffect(() => {
         AOS.init();
@@ -8,7 +9,7 @@ function Home() {
     return (
         <div className='container'>
             <div className='color-block hidden mymd:flex'></div>
-            <div className='flex flex-col mymd:flex-row items-center pt-[20px] mymd:pb-[20px] pb-[100px] justify-between gap-[50px]'>
+            <div className='lg:h-[100vh] h-full flex flex-col mymd:flex-row items-center pt-[20px] mymd:pb-[20px] pb-[100px] justify-between gap-[50px]'>
                 <div
                     data-aos='zoom-in-up' data-aos-duration='1000'
                     className="
@@ -33,7 +34,7 @@ function Home() {
                         <h1 className='text-white' data-aos='fade-up' data-aos-duration='1500'>Fullstack developer</h1>
                     </article>
                     <p className='text-white mymd:text-left text-center leading-8 tracking-wider' data-aos='fade-up' data-aos-duration='2000'>I'm a Vietnamese based fullstack developer focused on crafting clean & user‑friendly experiences, I am passionate about building excellent software that improves the lives of those around me.</p>
-                    <Link data-aos='fade-up' data-aos-duration='2500' to={'/about-me'} className='max-w-[230px] text-center uppercase text-white px-[30px] py-[10px] border rounded-md border-my-yellow hover:bg-my-yellow duration-200'>More about me</Link>
+                    <Link data-aos='fade-up' data-aos-duration='2500' to={ESidebar.ABOUTME} className='max-w-[230px] text-center uppercase text-white px-[30px] py-[10px] border rounded-md border-my-yellow hover:bg-my-yellow duration-200'>More about me</Link>
                 </div>
             </div>
         </div >
