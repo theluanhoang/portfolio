@@ -28,7 +28,7 @@ function MyProject() {
     return (
         <div className='container'>
             <div className='py-[50px]'>
-                <Title title={'My'} titleActive={'Profile'} subTitle={'Works'} />
+                <Title title={'My'} titleActive={'Project'} subTitle={'Works'} />
                 <ul className='flex flex-row flex-wrap justify-center gap-[30px] mt-[100px]'>
                     <li onClick={() => handleSetType('all')} className={`text-white uppercase font-bold hover:text-my-yellow duration-200 cursor-pointer`}>
                         <p className={`${typeProject === 'all' ? 'text-my-yellow' : ''}`}>All</p>
