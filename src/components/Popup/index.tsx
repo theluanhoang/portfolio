@@ -38,14 +38,14 @@ function Popup({ author, category, image, name, responsive, source, technology, 
                         </div>
                         <div className='flex flex-row items-center gap-2'>
                             <IoEarth color='white' size={20} />
-                            <span className='text-white max-w-full'>Website: <a href={website} className='font-bold text-my-yellow underline line-clamp-1'>{website}</a></span>
+                            <span className='text-white max-w-full'>Website: <a href={website} target='_blank' className='font-bold text-my-yellow underline line-clamp-1'>{website}</a></span>
                         </div>
                         <div className='flex flex-row items-center gap-2'>
                             <TbSourceCode color='white' size={20} />
-                            <span className='text-white max-w-full'>Source code: <a href={source} className='font-bold text-my-yellow underline line-clamp-1'>{source}</a></span>
+                            <span className='text-white max-w-full'>Source code: <a href={source} target='_blank' className='font-bold text-my-yellow underline line-clamp-1'>{source}</a></span>
                         </div>
                     </div>
-                    <a href={website} className='relative group'>
+                    <a href={website} target='_blank' className='relative group'>
                         <img src={image} alt={name} className='rounded-lg' />
                         <div className='absolute top-0 left-0 rounded-lg bottom-0 right-0 bg-black bg-opacity-50 flex group-hover:hidden'></div>
                     </a>
