@@ -26,7 +26,7 @@ function Home() {
                 h-[200px]
                 bg-cover 
                 bg-no-repeat
-                bg-center bg-[url('https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/299840624_368015352192884_990020078956581529_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=R8IZPKeFgmYAX_RghXu&_nc_ht=scontent.fdad3-5.fna&oh=00_AfB_Sv-rBTR_o8mzslJ6ygXK4jYnkZ5zGrIoDiadnW20Bg&oe=64438DA6')]">
+                bg-center bg-[url('https://res.cloudinary.com/dvaegokfq/image/upload/v1682603296/ulx5mwn2hyukyjovih0r.jpg')]">
                 </div>
                 <div className='max-w-[550px] flex flex-col gap-[20px] mymd:items-start items-center'>
                     <article className='mymd:text-5xl md:text-4xl text-3xl font-bold uppercase mymd:text-left text-center flex flex-col gap-3'>

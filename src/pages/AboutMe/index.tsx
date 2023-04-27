@@ -55,7 +55,7 @@ function AboutMe() {
                             bg-cover 
                             bg-no-repeat
                             bg-center 
-                            bg-[url('https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/299840624_368015352192884_990020078956581529_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=R8IZPKeFgmYAX_RghXu&_nc_ht=scontent.fdad3-5.fna&oh=00_AfB_Sv-rBTR_o8mzslJ6ygXK4jYnkZ5zGrIoDiadnW20Bg&oe=64438DA6')]"></div>
+                            bg-[url('https://res.cloudinary.com/dvaegokfq/image/upload/v1682603296/ulx5mwn2hyukyjovih0r.jpg')]"></div>
                         <div className='grid grid-cols-2 gap-[10px] mb-[50px]' >
                             <ul className='flex flex-col gap-[20px]' data-aos='fade-right' data-aos-duration='2500'>
                                 <div className='max-w-[280px]'>
