@@ -87,7 +87,7 @@ function AboutMe() {
 
                             </ul>
                         </div>
-                        <a data-aos='flip-left' data-aos-duration='2500' href={'/about-me'} className='max-w-[230px] text-center uppercase text-white px-[30px] py-[10px] border rounded-md border-my-yellow hover:bg-my-yellow duration-200'>Open CV</a>
+                        <a data-aos='flip-left' data-aos-duration='2500' href={'https://www.topcv.vn/xem-cv/B14JDFgBVwUBA1xXAFpSX1ABAVMEAgYFVAANBw94c9'} target='_blank' className='max-w-[230px] text-center uppercase text-white px-[30px] py-[10px] border rounded-md border-my-yellow hover:bg-my-yellow duration-200'>Open CV</a>
                     </div>
                     <div className='max-w-[600px] grid sm-[580]:grid-cols-2 grid-cols-1 gap-[20px]' data-aos='flip-right' data-aos-duration='3000'>
                         <div className='xs-[320px]:w-[267px] py-[20px] px-[40px] flex flex-col gap-[10px] border border-[#cbcbcb] rounded-md border-opacity-50'>
