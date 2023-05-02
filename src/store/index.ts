@@ -1,12 +1,10 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, persistStore } from "redux-persist";
 import popupSlice from "./popup.slice";
-import darkLightSlice from "./darkLight.slice";
 import blogsSlice from "./blogs.slice";
 
 const rootReducer = combineReducers({
     popup: popupSlice,
-    darkLight: darkLightSlice,
     blogs: blogsSlice
 })
 
