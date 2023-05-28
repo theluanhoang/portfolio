@@ -12,6 +12,8 @@ import vku from '../assets/image/vku.png'
 import blog from '../assets/image/blog.png'
 import coffee from '../assets/image/coffee.png'
 import tcCovid from '../assets/image/tc-covid.png'
+import tindereffect from '../assets/image/effect-tinder.png'
+import imageslider from '../assets/image/image-slider.png'
 
 export interface Project {
     name?: string,
@@ -25,6 +27,28 @@ export interface Project {
     remarkable?: boolean
 }
 export const projects:Project[] = [
+    {
+        name: 'Tinder Effect',
+        author: 'Hoang The Luan',
+        technology: 'HTML, CSS & JAVASCRIPT',
+        responsive: true,
+        website: 'https://theluanhoang.github.io/effect-tinder/',
+        source: 'https://github.com/theluanhoang/effect-tinder',
+        image: tindereffect,
+        category: 'htmlcss',
+        remarkable: true
+    },
+    {
+        name: 'Image slider',
+        author: 'Hoang The Luan',
+        technology: 'HTML, CSS & JAVASCRIPT',
+        responsive: true,
+        website: 'https://image-slider-green.vercel.app/',
+        source: 'https://github.com/theluanhoang/image-slider',
+        image: imageslider,
+        category: 'htmlcss',
+        remarkable: true
+    },
     {
         name: 'Learn kit',
         author: 'Hoang The Luan',
