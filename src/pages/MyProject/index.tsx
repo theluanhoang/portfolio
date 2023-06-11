@@ -45,6 +45,9 @@ function MyProject() {
                     <li onClick={() => handleSetType('htmlcss')} className={`text-white uppercase font-bold hover:text-my-yellow duration-200 cursor-pointer`}>
                         <p className={`${typeProject === 'htmlcss' ? 'text-my-yellow' : ''}`}>Html & css</p>
                     </li>
+                    <li onClick={() => handleSetType('game')} className={`text-white uppercase font-bold hover:text-my-yellow duration-200 cursor-pointer`}>
+                        <p className={`${typeProject === 'game' ? 'text-my-yellow' : ''}`}>Game</p>
+                    </li>
                 </ul>
                 <div className='flex items-center justify-center'>
                     <PaginatedItems type='' data={listProject} itemPerPage={6} handleToggle={handleToggle} setCurrentData={setCurrentProject} />

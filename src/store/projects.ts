@@ -14,6 +14,7 @@ import coffee from '../assets/image/coffee.png'
 import tcCovid from '../assets/image/tc-covid.png'
 import tindereffect from '../assets/image/effect-tinder.png'
 import imageslider from '../assets/image/image-slider.png'
+import snakeGame from '../assets/image/snake-game.png'
 
 export interface Project {
     name?: string,
@@ -145,6 +146,17 @@ export const projects:Project[] = [
         image: hofmann,
         category: 'htmlcss',
         remarkable: true,
+    },
+    {
+        name: 'Snake Game',
+        author: 'Hoang The Luan',
+        technology: 'HTML, JAVASCRIPT',
+        responsive: false,
+        website: 'https://snake-game-dracula.vercel.app/',
+        source: 'https://github.com/theluanhoang/snake-game',
+        image: snakeGame,
+        category: 'game',
+        remarkable: false
     },
     {
         name: 'NVD Shop',
