@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
-import Title from '../../components/Title'
-import { FaMapMarkerAlt, FaPhoneSquareAlt, FaFacebookF, FaTiktok, FaYoutube } from 'react-icons/fa'
-import { HiMailOpen } from 'react-icons/hi'
-import { AiFillInstagram } from 'react-icons/ai'
-import AOS from '../../utils/aos'
-import { ref, child, get, set } from "firebase/database";
-import { database } from '../../firebase'
-import { v4 as uuidv4 } from 'uuid';
 import { notification } from 'antd'
-import { send } from 'emailjs-com';
+import { send } from 'emailjs-com'
+import { child, ref, set } from "firebase/database"
+import { ErrorMessage, Field, Form, Formik } from 'formik'
+import React from 'react'
+import { AiFillInstagram } from 'react-icons/ai'
+import { FaFacebookF, FaMapMarkerAlt, FaPhoneSquareAlt, FaTiktok, FaYoutube } from 'react-icons/fa'
+import { HiMailOpen } from 'react-icons/hi'
+import { v4 as uuidv4 } from 'uuid'
 import * as Yup from 'yup'
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import Title from '../../components/Title'
+import { database } from '../../firebase'
+import AOS from '../../utils/aos'
 interface IComment {
     username: string,
     email: string,
@@ -33,15 +33,15 @@ function Contact() {
             const isValid = await validationSchema.isValid(values);
             if (isValid) {
                 send(
-                    'service_meg75cy',
-                    'template_blb2oqj',
+                    import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                    import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                     {
                         from_name: values.email,
-                        to_name: 'hoangtheluan2016@gmail.com',
+                        to_name: import.meta.env.VITE_EMAILJS_RECEIVER,
                         message: values.message,
                         reply_to: values.email
                     },
-                    'KcZHcBZH-IpTQ5d58'
+                    import.meta.env.VITE_EMAILJS_PUBLIC_KEY
                 )
                     .then((response) => {
                         console.log('SUCCESS!', response.status, response.text);
@@ -109,7 +109,7 @@ function Contact() {
                                 <FaPhoneSquareAlt className='text-my-yellow' size={36} />
                                 <div>
                                     <p className='text-[#CDCDCD] uppercase font-bold'>Call me</p>
-                                    <p className='text-white'>(+84) 379124695</p>
+                                    <p className='text-white'>(+84) 372481508</p>
                                 </div>
                             </li>
                         </ul>

@@ -1,13 +1,13 @@
-import React from 'react'
-import Title from '../../components/Title'
 import {
-    Chart as ChartJS,
     ArcElement,
-    Tooltip,
-    Legend
+    Chart as ChartJS,
+    Legend,
+    Tooltip
 } from 'chart.js'
-import { BsBookFill } from 'react-icons/bs'
+import React from 'react'
 import { Doughnut } from 'react-chartjs-2'
+import { BsBookFill } from 'react-icons/bs'
+import Title from '../../components/Title'
 import { skills } from '../../store/skills'
 import AOS from '../../utils/aos'
 
@@ -65,13 +65,13 @@ function AboutMe() {
                                     <p className='text-white font-bold md:text-base text-sm'><label className='text-[#CBCBCB]'>Age</label>: 20</p>
                                 </div>
                                 <div className='max-w-[280px]'>
-                                    <p className='text-white font-bold md:text-base text-sm'><label className='text-[#CBCBCB]'>Phone</label>: (+84) 379124695</p>
+                                    <p className='text-white font-bold md:text-base text-sm'><label className='text-[#CBCBCB]'>Phone</label>: (+84) 372481508</p>
                                 </div>
                                 <div className='max-w-[280px]'>
                                     <p className='text-white font-bold md:text-base text-sm'><label className='text-[#CBCBCB]'>Nationality</label>: Vietnamese</p>
                                 </div>
                                 <div className='max-w-[280px]'>
-                                    <p className='text-white font-bold md:text-base text-sm'><label className='text-[#CBCBCB]'>Facebook</label>: <a href='https://facebook.com/htl27062003'>Hoang The Luan</a></p>
+                                    <p className='text-white font-bold md:text-base text-sm'><label className='text-[#CBCBCB]'>Facebook</label>: <a href='https://www.facebook.com/htluan2706/'>Hoang The Luan</a></p>
                                 </div>
                             </ul>
                             <ul className='flex flex-col gap-[20px]' data-aos='fade-left' data-aos-duration='2500'>
@@ -79,7 +79,7 @@ function AboutMe() {
                                     <p className='text-white font-bold md:text-base text-sm'><label className='text-[#CBCBCB]'>Address</label>: <p>Gio Linh district, Quang Tri province.</p></p>
                                 </div>
                                 <div className='max-w-[280px]'>
-                                    <p className='text-white font-bold md:text-base text-sm'><label className='text-[#CBCBCB]'>Email</label>: <p>hoangtheluan2016 @gmail . com</p></p>
+                                    <p className='text-white font-bold md:text-base text-sm'><label className='text-[#CBCBCB]'>Email</label>: <p>hoangtheluan2016@gmail.com</p></p>
                                 </div>
                                 <div className='max-w-[280px]'>
                                     <p className='text-white font-bold md:text-base text-sm'><label className='text-[#CBCBCB]'>Language</label>: <p>Vietnamese, English.</p></p>
